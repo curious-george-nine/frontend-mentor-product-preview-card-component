@@ -1,0 +1,119 @@
+@import url("https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,700&family=Montserrat:wght@500;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: hsl(30, 38%, 92%);
+}
+
+.card {
+  width: 355px;
+  height: 740px;
+  background-color: white;
+  border-radius: 15px;
+  box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.05);
+}
+
+.card .card-image-mobile img {
+  border-top-right-radius: 15px;
+  border-top-left-radius: 15px;
+}
+
+@media screen and (max-width: 1439.9999px) {
+  .card .card-image-desktop {
+    display: none;
+  }
+}
+
+.card .card-content {
+  padding-inline: 2rem;
+  padding-block: 1.5rem;
+}
+
+.card .perfume {
+  font-size: 0.8rem;
+  letter-spacing: 0.4rem;
+  font-family: "Montserrat", sans-serif;
+  text-transform: uppercase;
+  color: rgba(0, 0, 0, 0.5);
+}
+
+.card .card-content .card-title {
+  font-family: "Fraunces", sans-serif;
+  font-size: 2.15rem;
+  padding-block: 0.8rem;
+}
+
+.card .card-content .card-desc {
+  font-family: "Montserrat", sans-serif;
+  line-height: 1.8rem;
+  color: rgba(0, 0, 0, 0.5);
+  font-size: 1.07rem;
+}
+
+.prices {
+  display: flex;
+  align-items: center;
+  padding-block: 1.4rem;
+  gap: 16px;
+}
+
+.prices .price-new {
+  font-size: 2.3rem;
+  color: hsl(158, 36%, 37%);
+  font-family: "Fraunces", sans-serif;
+}
+
+.prices .price-new + .price-old {
+  color: rgba(0, 0, 0, 0.5);
+  text-decoration: line-through;
+  font-family: "Montserrat", sans-serif;
+}
+
+.card .card-content button.card-button {
+  background-color: hsl(158, 36%, 37%);
+  border: none;
+  display: block;
+  width: 100%;
+  border-radius: 15px;
+  padding-block: 1.2rem;
+  font-family: "Montserrat", sans-serif;
+  color: white;
+  font-size: 1.05rem;
+  transition-duration: 0.3s;
+  cursor: pointer;
+}
+
+.card .card-content button.card-button:active {
+  background-color: hsl(158, 36%, 23%);
+}
+
+.card .card-content button.card-button img {
+  padding-right: 6px;
+}
+
+@media screen and (min-width: 1440px) {
+  .card {
+    display: flex;
+    width: 700px;
+    height: 450px;
+  }
+
+  .card .card-image-mobile {
+    display: none;
+  }
+
+  .card .card-image-desktop img {
+    height: 450px;
+    border-top-left-radius: 15px;
+    border-bottom-left-radius: 15px;
+  }
+}
